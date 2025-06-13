@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Horario de Gia</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/script.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Bienvenida, Gia 🌷</h1>
+    <p id="fecha-hora"></p>
+    <p class="frase" id="frase-motivadora"></p>
+    <button id="toggle-tema">Cambiar a modo oscuro</button>
+  </header>
+
+  <section class="horario-container">
+    <h2>📚 Horario Semanal</h2>
+
+    <div class="selector-pares">
+      <button onclick="mostrarPar('par1')">Lunes y Martes</button>
+      <button onclick="mostrarPar('par2')">Miércoles y Jueves</button>
+      <button onclick="mostrarPar('par3')">Viernes y Sábado</button>
+    </div>
+
+    <div class="tabla-responsive">
+      <table class="tabla-horaria">
+        <thead>
+          <tr>
+            <th>Hora / Día</th>
+            <th class="col-dia" data-dia="1" data-par="par1">Lunes</th>
+            <th class="col-dia" data-dia="2" data-par="par1">Martes</th>
+            <th class="col-dia" data-dia="3" data-par="par2">Miércoles</th>
+            <th class="col-dia" data-dia="4" data-par="par2">Jueves</th>
+            <th class="col-dia" data-dia="5" data-par="par3">Viernes</th>
+            <th class="col-dia" data-dia="6" data-par="par3">Sábado</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-horaria-body">
+          <!-- Contenido generado por JS -->
+        </tbody>
+      </table>
+    </div>
+
+    <footer>
+      <p class="frase" id="frase-final"></p>
+    </footer>
+  </section>
+
+</body>
+</html>

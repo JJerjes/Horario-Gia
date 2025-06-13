@@ -1,0 +1,162 @@
+:root {
+  --bg: #fff0f5;
+  --text: #4b2e2e;
+  --header: #ffe4ec;
+  --tabla-th: #f8c8dc;
+  --verde: #c8e6c9;
+  --rojo: #ffcdd2;
+  --hora-text: #4b2e2e;
+  --btn-bg: #f8c8dc;
+  --btn-text: #4b2e2e;
+  --celda-bg: #fff5f8;
+}
+
+body.dark {
+  --bg: #1f1f1f;
+  --text: #f0e9ec;
+  --header: #333;
+  --tabla-th: #555;
+  --verde: #336633;
+  --rojo: #993333;
+  --hora-text: #f0e9ec;
+  --btn-bg: #555;
+  --btn-text: #f0e9ec;
+  --celda-bg: #2a2a2a;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--header);
+  color: var(--text);
+}
+
+#fecha-hora {
+  font-weight: bold;
+  margin: 5px 0 10px 0;
+}
+
+.frase {
+  font-style: italic;
+  margin: 10px 0;
+}
+
+#toggle-tema {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#toggle-tema:hover {
+  background: var(--btn-text);
+  color: var(--btn-bg);
+}
+
+.horario-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.selector-pares {
+  display: none;
+  margin-bottom: 15px;
+}
+
+.selector-pares button {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  padding: 6px 10px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.selector-pares button:hover {
+  background-color: var(--btn-text);
+  color: var(--btn-bg);
+}
+
+.tabla-responsive {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.tabla-horaria {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.tabla-horaria th, .tabla-horaria td {
+  border: 1px solid var(--btn-bg);
+  padding: 6px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 0.9rem;
+  min-width: 100px;
+  height: 35px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: var(--text);
+  background-color: var(--celda-bg);
+}
+
+.tabla-horaria th {
+  background-color: var(--tabla-th);
+  color: var(--text);
+}
+
+.tabla-horaria td:first-child {
+  color: var(--hora-text);
+  font-weight: bold;
+  background-color: var(--header);
+}
+
+.cumplido {
+  background-color: var(--verde) !important;
+}
+
+.pendiente {
+  background-color: var(--rojo) !important;
+}
+
+@media (max-width: 768px) {
+  .selector-pares {
+    display: block;
+  }
+
+  .col-dia {
+    display: none;
+  }
+
+  .col-dia.mostrar {
+    display: table-cell;
+  }
+
+  .tabla-horaria {
+    min-width: auto;
+  }
+
+  .tabla-horaria th, .tabla-horaria td {
+    padding: 4px 6px;
+    font-size: 0.8rem;
+    min-width: 70px;
+    height: 30px;
+  }
+}
